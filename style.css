@@ -32,3 +32,7 @@
 .entry--nested {
     padding-left: 2rem;
 }
+
+.rtl {
+    direction: rtl;
+}
