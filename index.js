@@ -15,7 +15,8 @@ const wikiEndpoint = 'wikipedia.org/wiki/';
 function createEntryNode(entry) {
     let node = document.createElement('div');
 
-    let classNames = isSelectedLanguageRTL() ? ['entry--nested', 'rtl'] : ['entry--nested'];
+    let classNames = isSelectedLanguageRTL() ? ['rtl'] : [];
+    classNames = entry.level > 1 ? [...classNames, 'entry--nested'] : classNames;
     node.classList.add(...classNames);
 
     let anchor = document.createElement('a');
